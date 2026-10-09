@@ -168,8 +168,7 @@ The early support notes already list “air compressor system: pressure, flow, i
 
 ## What is still untested
 
-- Weaving with loom / air on
+- Weaving with loom with air on
 - Live pulse timing, feedback, cylinder sensor, pedal
 - A new design from AdaCAD (no Actrom exporter yet)
 
-Do not treat a clean AIWeaver start as “the loom weaves”.
