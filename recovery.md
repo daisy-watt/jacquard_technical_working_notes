@@ -72,7 +72,7 @@ When the data card and that serial-port grey area would not move, the project le
 
 Tony came on board around this point. He is the person who swayed the hardware decision, after several people had already suggested it: stop fighting the VM and **build a period machine**, an old tower that can take a real PCI card, running Windows 2000 natively.
 
-A few iterations of scavenging / buying a box later, that machine existed: the salvaged patchwork old machine PC tower. An **APCI-1710 was ordered from ADDI-DATA**.
+A few iterations of scavenging a few old box's later (thanks Dave), that machine existed: the salvaged patchwork old machine PC tower. we had also prior to this ordered the **APCI-1710 from ADDI-DATA**.
 
 That decision is why the later software work is on bare metal, not in VirtualBox.
 
@@ -82,9 +82,9 @@ The card showed up around **April 2026**. From here the problems look like “so
 
 Typical early physical-PC attempts:
 
-| What we tried | What the dialog said | What we thought |
+| What I tried | What the dialog said | What I assumed |
 | --- | --- | --- |
-| Install AIWeaver on a newer Windows | OS not adequate / MSI error 1406 | Need a patched XP installer |
+| Install AIWeaver on a newer Windows | MSI error 1406 | Need a patched XP installer |
 | Run AIWeaver | Unable to locate `APCI1500.DLL` | This build is 1500-only; we have the wrong card or the wrong disc |
 | ADDI 1500 packages | This PC has no 1500 | Maybe we need that card too |
 | Rename `APCI1710.DLL` → `APCI1500.DLL` | Entry point `i_APCI1500_*` not found | Still the wrong driver file |
@@ -93,7 +93,7 @@ Those guesses were reasonable from the **surface wording**. They were wrong abou
 
 Renaming was a useful negative: the two DLLs export **different names**. AIWeaver wants **both** libraries present. It does not want one library wearing two names.
 
-## 5. Re-read (September 2026)
+## 5. Re-read the code through a stack trace (September 2026)
 
 A closer look at `AIWeaver.exe` (imports and call sites, not the disc label) showed:
 
@@ -104,7 +104,7 @@ A closer look at `AIWeaver.exe` (imports and call sites, not the disc label) sho
 
 So the 1500 error was hiding the 1710 error. The program was not a “wrong generation”.
 
-A stand-in `APCI1500.DLL` was built and burned to CD. It only answers “0 boards”. That unblocks the **loader**, nothing else.
+I built a stand-in `APCI1500.DLL` ( written in C, my first time writing C ) was built and burned accross and bundled in. It only answers “0 boards”. That unblocks the **loader**, nothing else. hmmm.
 
 ```mermaid
 flowchart TD
@@ -133,7 +133,7 @@ flowchart TD
 
 ## 6. Loader, then packages, then registry (September to October 2026)
 
-| When | What we did | What it actually meant |
+| When | What i did | What it actually meant |
 | --- | --- | --- |
 | September 2026 | Stub on the loom PC | Next error: missing `APCI1710.DLL` (as predicted) |
 | September 2026 | 1710 setup from the ADDI CD offers uninstall | Driver **package** already registered; files not next to AIWeaver |
