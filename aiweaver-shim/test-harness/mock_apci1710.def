@@ -1,0 +1,12 @@
+LIBRARY APCI1710
+EXPORTS
+  i_APCI1710_CheckAndGetPCISlotNumber
+  i_APCI1710_SetBoardInformation
+  i_APCI1710_GetHardwareInformation
+  i_APCI1710_CloseBoardHandle
+  i_APCI1710_ConfigureAllModule
+  i_APCI1710_InitDigitalIO
+  i_APCI1710_SetDigitalIOMemoryOn
+  i_APCI1710_SetDigitalIOChlOn
+  i_APCI1710_SetDigitalIOChlOff
+  i_APCI1710_ReadDigitalIOChlValue

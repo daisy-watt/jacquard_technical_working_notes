@@ -1,0 +1,49 @@
+Copyright
+
+All rights reserved. This manual is intended for the manager and its personnel.
+No part of this publication may be reproduced or transmitted by any means.
+Offences can have penal consequences.
+
+
+Guarantee and responsibility
+
+Basically are effective our "general terms of delivery and payment". The manager receives
+them at the latest with the invoice. Claims for guarantee and responsibility in case of
+injuries and material damages are excluded, if they are due to one or some of the following
+causes:
+- if the board has not been used for the intended purpose
+- improper installation, operation and maintenance of the board
+- if the board has been operated with defective safety devices or with not appropriate or
+   non-functioning safety equipment
+- nonobservance of the instructions concerning: transport, storage, inserting the board, use,
+   limit values, maintenance, device drivers
+- altering the board at the user's own initiative
+- altering the source files at the user's own initiative
+- not checking properly the parts which are subject to wear
+- disasters caused by the intrusion of foreign bodies and by influence beyond the user's
+   control.
+
+
+Licence for ADDI-DATA software products
+
+Read carefully this licence before using the software. The right for using this software is
+given to the customer, if he/she agrees to the conditions of this licence.
+- this software can only be used for configuring ADDI-DATA boards.
+- copying the software is forbidden (except for archiving/ saving data and for replacing
+   defective data media).
+- deassembling, decompiling, decoding and reverse engineering of the software
+   are forbidden.
+- this licence and the software can be transferred to a third party, so far as
+   this party has purchased a board, declares to agree to all the clauses of this licence contract
+   and the preceding owner has not kept copies of the software.
+
+ADDI-DATA GmbH
+Meﬂ- und Steuerungstechnik
+Dieselstraﬂe 3
+D-77833 Ottersweier
+
+Phone   :      +49 (0) 7223/9493-0
+Faxline  :      +49 (0) 7223/9493-92
+
+e-mail    :       info@addi-data.com
+Internet :        http://addi-data.com

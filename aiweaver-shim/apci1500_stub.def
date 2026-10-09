@@ -1,0 +1,12 @@
+; AIWeaver.exe imports these by plain (undecorated) name.
+LIBRARY APCI1500
+EXPORTS
+  i_APCI1500_CheckAndGetPCISlotNumber
+  i_APCI1500_SetBoardInformation
+  i_APCI1500_CloseBoardHandle
+  i_APCI1500_Read1DigitalInput
+  i_APCI1500_Set1DigitalOutputOn
+  i_APCI1500_Set1DigitalOutputOff
+  i_APCI1500_Set16DigitalOutputOn
+  i_APCI1500_SetOutputMemoryOn
+  i_APCI1500_SetOutputMemoryOff

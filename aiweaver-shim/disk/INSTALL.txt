@@ -1,0 +1,56 @@
+AIWeaver on an APCI-1710 only PC (Windows 2000)
+=================================================
+
+What is on this disk
+--------------------
+  APCI1500.DLL   Stand-in for the old ADDI-DATA APCI-1500 driver DLL.
+                 It exists only so AIWeaver.exe can start. It tells
+                 AIWeaver "no APCI-1500 board fitted", and AIWeaver then
+                 runs the loom through the APCI-1710 on its own.
+  INSTALL.txt    This file.
+
+Before you start
+----------------
+  1. The APCI-1710 driver from ADDI-DATA must already be installed, so
+     APCI1710.DLL is in C:\WINNT\system32 and the card shows in
+     Device Manager without a yellow warning.
+  2. AIWeaver must be installed. On Windows 2000 the ORIGINAL setup.exe /
+     AIWeaver.msi from the CD should install normally (the installer's
+     OS check was written for Windows 2000). Default folder:
+       C:\Program Files\AIWeaver
+
+Install
+-------
+  1. If you previously copied or renamed any APCI1500.DLL (for example
+     a renamed APCI1710.DLL), delete it from:
+       C:\Program Files\AIWeaver
+       C:\WINNT\system32
+     Do NOT delete the real APCI1710.DLL from system32.
+  2. Copy APCI1500.DLL from this disk into:
+       C:\Program Files\AIWeaver
+     (the same folder as AIWeaver.exe).
+  3. Make sure DGI_IO.CFG is in that same folder. AIWeaver loads it into
+     the 1710 card at start-up by its bare file name, so the shortcut's
+     "Start in" folder must be C:\Program Files\AIWeaver.
+  4. In AIWeaver's settings (or HKEY_CURRENT_USER\Software\AIWeaver):
+       Modules          = 1, 2 or 3   (the default is 3)
+       ColorModuleUsed  = 0
+     With one 1710 and no 1500, AIWeaver only uses its "1710 only" mode
+     for 1-3 modules. The colour / special-commands output was wired to
+     the APCI-1500 and will not be driven.
+
+First run - loom power OFF / outputs disconnected
+--------------------------------------------------
+  1. Start AIWeaver. It should now get past the "APCI1500.DLL" and
+     "entry point not found" errors.
+  2. Look for messages such as
+       " APCI1710 board ... SetBoardInformation Error"
+       " APCI1710 board ... module ... Initialisation Error"
+     Write down the exact text and numbers if any appear.
+  3. Quit AIWeaver and check C:\Program Files\AIWeaver for a file called
+     APCI1500_stub.log.
+       - One line "CheckAndGetPCISlotNumber -> 0 boards" is expected.
+       - Any line ending "(unexpected)" means AIWeaver tried to use the
+         missing 1500 board. Do not run the loom; bring the log back.
+  4. Only once the above is clean, test with the loom under supervision
+     and with the emergency stops working.
