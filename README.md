@@ -2,9 +2,9 @@
 
 Technical notes for restoring a **Martel Catala / Albany International Concordia** jacquard under **AIWeaver** on a Windows 2000 PC with an **ADDI-DATA APCI-1710**.
 
-This is **ad-hoc reverse engineering**, not a vendor manual. The project started from a dead loom, a random disc, and scattered notes, about one to two years into learning to code. The path was trial and error: a Windows 2000 VM in **late 2024 to early 2025** (Internet Archive ISO), tried first because it was more affordable and easier to keep long term, then a physical old PC and a real APCI-1710 once the proprietary PCI card would not virtualise. What we “know” below was inferred from error dialogs, the EXE, ADDIREG, and the machine, and some of it was wrong for a long time. Read the [recovery log](recovery.md) for that chronology.
+This is **ad-hoc reverse engineering**, not a vendor manual. The project started from a dead loom, no PC or data cards, a random disc with "AIWeaver" on it in permanent marker, and scattered notes, starting about one to two years into learning to code... now im about 5 years in. The path was trial and error: a Windows 2000 VM in **late 2024 to early 2025** (Internet Archive ISO), tried first because it was more affordable and easier to keep long term, then a physical old PC and a real APCI-1710 once the proprietary PCI card would not virtualize. What I “know” below was inferred from error dialogs, the EXE, ADDIREG, and the machine, and some of it was wrong for a long time. Read the [recovery log](recovery.md) for that chronology.
 
-AdaCAD is the planned design tool. Its source is **not** in this repo. The clone used for the research notes stays at `2026/AdaCAD`.
+AdaCAD is the planned design tool. Its source is **not** in this repo. 
 
 ## Knowledge map
 
@@ -32,7 +32,7 @@ Topics that had to be learned before the next step would move. Detail lives in t
 | Fix the cable damaged in the initial move | Yes |
 | Acquire a Windows 2000 ISO | Yes |
 | Set up a working OS, virtual or physical | Yes |
-| Acquire and understand the correct air compressor for the pneumatics | Yes |
+| Acquire and understand the correct air compressor for the pneumatics | Yes (not purchased perm one yet) |
 | Acquire an APCI-1710 ADDI-DATA card | Yes |
 | APCI-1710 visible in Device Manager | Yes (`ADDI-DATA GmbH APCI-1710`) |
 | Board registered in ADDIREG | Yes (PCI slot **131**) |
@@ -64,6 +64,5 @@ Topics that had to be learned before the next step would move. Detail lives in t
 | [`aiweaver-shim/addi-cd/`](aiweaver-shim/addi-cd/) | Extracted ADDI driver / headers |
 | [`aiweaver-shim/schematics/`](aiweaver-shim/schematics/) | Schematic scan pages |
 
-## Safety
 
-Leave loom air / mainframe power off until you intend to weave. Pin 38 on the 1710 drives “stop the loom” and the cylinder valves. The PCI card itself is powered by the PC, not by the loom.
+Pin 38 on the 1710 drives “stop the loom” and the cylinder valves. The PCI card itself is powered by the PC, not by the loom.
