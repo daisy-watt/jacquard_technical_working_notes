@@ -1,6 +1,6 @@
-# Concordia / AIWeaver
+# Concordia loom and AIWeaver
 
-Technical notes for restoring a **Martel Catala / Albany International Concordia** jacquard under **AIWeaver** on a Windows 2000 PC with an **ADDI-DATA APCI-1710**.
+These are my technical notes for restoring a **Martel Catala / Albany International Concordia** jacquard under **AIWeaver** on a Windows 2000 PC with an **ADDI-DATA APCI-1710**.
 
 This is **ad-hoc reverse engineering**, not a vendor manual. The project started from a dead loom, no PC or data cards, a random disc with "AIWeaver" on it in permanent marker, and scattered notes, starting about one to two years into learning to code... now im about 5 years in. The path was trial and error: a Windows 2000 VM in **late 2024 to early 2025** (Internet Archive ISO), tried first because it was more affordable and easier to keep long term, then a physical old PC and a real APCI-1710 once the proprietary PCI card would not virtualize. What I “know” below was inferred from error dialogs, the EXE, ADDIREG, and the machine. Read the [recovery log](recovery.md) for that chronology.
 
